@@ -26,7 +26,48 @@ func (wallet *Wallet) GetBalance() {
 	fmt.Printf("Wallet balance: %.2f\n", wallet.Balance)
 }
 
-func (wallet *Wallet) GetTransactions() []float64 {
+func (wallet *Wallet) ShowTransactions() []float64 {
 	wallet.Transactions = append(wallet.Transactions, wallet.Balance)
 	return wallet.Transactions
+}
+
+func RunWalletMenu(wallet *Wallet) {
+	for {
+		fmt.Println("\nWallet Menu")
+		fmt.Println("1. Add Money")
+		fmt.Println("2. Spend Money")
+		fmt.Println("3. Show Balance")
+		fmt.Println("4. Show Transactions")
+		fmt.Println("5. Exit")
+		fmt.Print("Choose your option: ")
+
+		var choice int
+		fmt.Scanln(&choice)
+
+		switch choice {
+		case 1:
+			var amount float64
+			fmt.Print("Enter amount to add: ")
+			fmt.Scanln(&amount)
+			wallet.AddMoney(amount)
+
+		case 2:
+			var amount float64
+			fmt.Print("Enter amount to spend: ")
+			fmt.Scanln(&amount)
+			wallet.SpendMoney(amount)
+
+		case 3:
+			wallet.GetBalance()
+
+		case 4:
+			wallet.ShowTransactions()
+
+		case 5:
+			fmt.Println("Exiting Wallet menu")
+
+		default:
+			fmt.Println("Invalid choice, try again.")
+		}
+	}
 }
