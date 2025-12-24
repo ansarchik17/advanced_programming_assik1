@@ -1,11 +1,12 @@
 package main
 
 import (
-	"assignment1/employee"
-	"assignment1/gym"
-	"assignment1/hotel"
-	"assignment1/wallet"
 	"fmt"
+
+	"github.com/AnsarKeles/Assignment1/employee"
+	"github.com/AnsarKeles/Assignment1/gym"
+	"github.com/AnsarKeles/Assignment1/hotel"
+	"github.com/AnsarKeles/Assignment1/wallet"
 )
 
 func main() {
