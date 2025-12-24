@@ -65,7 +65,7 @@ func RunWalletMenu(wallet *Wallet) {
 
 		case 5:
 			fmt.Println("Exiting Wallet menu")
-
+			return
 		default:
 			fmt.Println("Invalid choice, try again.")
 		}
