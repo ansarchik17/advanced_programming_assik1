@@ -136,7 +136,7 @@ func RunHotelMenu(myHotel *Hotel) {
 			}
 
 			fmt.Printf(
-				"Room %s, Type: %s, Price: %.2f, Status: %s\n",
+				"Room %s, type: %s, price: %.2f, status: %s\n",
 				room.RoomNumber,
 				room.Type,
 				room.PricePerNight,
